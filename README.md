@@ -9,14 +9,23 @@ To do so, the IMIC aims, each year, to propose a manufacturing problem submitted
 Results of the contest will then be considered as candidate solutions of the proposed problem, and will be compared and archived as a new benchmark instance.
 In a couple of years, IMIC is expected to become a reference benchmark for the community.
 
-## First edition's theme: The Flexibac problem
-The theme was announced during the SOHOMA 2024 conference.
-In this problem, a robot loads carts with mail containers having the same destination (homogeneous carts) and The problem is to manage boxes and carts all along the working period.
+## Second edition's theme: The Flexibac problem + (PLUS)
+<p align="center">
+  <img width="400" alt="image" src="https://github.com/user-attachments/assets/823f3625-083a-44c9-887a-419b30529866" />
+</p>
+The theme was announced during the SOHOMA 2025 conference. The Flexibac+ problem is an evolution of the first problem proposed for the first IMIC edition. In 2025, the different proposals oly adressed 2.5% of the total number of instances. Moreover over, only online solutions were proposed.
+
+<p align="center">
+  <img width="600" alt="image" src="https://github.com/user-attachments/assets/8807c454-855e-4279-828f-84080bbcf3c0" />
+</p>
+
+Flexibac+ takes up last year's theme with a view to pushing for the resolution of all available instances.
+
 More details on the problem are available [here](2025_edition/The_Flexibac_Problem.md).
 
 ## Important dates
 People interested in joining the contest should consider the following planning
-![image-20231022154230422](images/VisuelPlanningBenchmark.PNG)
+![agenda](./images/VisuelIMIC26.PNG)
 
 ### *From September to May* : Registration and team formation
 Registration is opened from September to May.
