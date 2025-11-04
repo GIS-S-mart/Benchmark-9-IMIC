@@ -37,7 +37,7 @@ Teams should registered to the contest via an online form available [here](https
 There are no limitations in the number of members in team, that could be constituted of students, industrials or academics.
 The registration is completely free.
 
-### *From October to May* : Publication of the problem on the web platform
+### *From October to May* : Development of solutions, interactions via mail or the web platform
 This Github page is the container of all information related to IMIC.
 The following pages are available for team members to access and use :
 + The problem is detailed [here](2025_edition/The_Flexibac_Problem.md).
@@ -46,8 +46,8 @@ The following pages are available for team members to access and use :
 + A forum will be opened if needed.
 The IMIC organization team will make its best to keep the participants informed of any important context modifications, but team members are advised to come on these pages regurlarly to check for any changes.
 
-### *End of July* : Submission of the contestants' proposals
-The different proposal have to be submitted before **July, 31st, 2025**. The organizing team will not consider proposals coming after this deadline.
+### *End of June* : Submission of the contestants' proposals
+The different proposal have to be submitted before **June, 30, 2026**. The organizing team will not consider proposals coming after this deadline.
 The submission should include :
 + A short paper describing the methodology followed to obtain the solution.
 + The input files needed to check the solution via the simulator (for more information, see the problem page).
