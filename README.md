@@ -29,7 +29,11 @@ People interested in joining the contest should consider the following planning
 
 ### *From September to May* : Registration and team formation
 Registration is opened from September to May.
-Teams should registered to the contest via an online form available [here](https://forms.office.com/e/FapnDQsVvv).
+Early registrations are opened until the 15th of November 2025.
+Late registration : May.
+Contest results will be due by the end of June 2026.
+
+Teams should registered to the contest via an online form available [here](https://forms.office.com/e/R06t6rwXTC).
 There are no limitations in the number of members in team, that could be constituted of students, industrials or academics.
 The registration is completely free.
 
