@@ -1,4 +1,4 @@
-# IMIC'25 FAQ
+# IMIC'26 FAQ
 
 ## Table of Contents
 - [General Information](#general-information)
