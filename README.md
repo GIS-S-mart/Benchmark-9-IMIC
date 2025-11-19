@@ -21,7 +21,7 @@ The theme was announced during the SOHOMA 2025 conference. The Flexibac+ problem
 
 Flexibac+ takes up last year's theme with a view to pushing for the resolution of all available instances.
 
-More details on the problem are available [here](2025_edition/The_Flexibac_Problem.md).
+More details on the problem are available [here](2026_edition/The_Flexibac_Problem.md).
 
 ## Important dates
 People interested in joining the contest should consider the following planning
@@ -40,8 +40,8 @@ The registration is completely free.
 ### *From October to May* : Development of solutions, interactions via mail or the web platform
 This Github page is the container of all information related to IMIC.
 The following pages are available for team members to access and use :
-+ The problem is detailed [here](2025_edition/The_Flexibac_Problem.md).
-+ A simulator is provided to the teams for testing their tentative solutions. All information about the simulator and its use are available [here](2025_edition/Simulator/README.md).
++ The problem is detailed [here](2026_edition/The_Flexibac_Problem.md).
++ A simulator is provided to the teams for testing their tentative solutions. All information about the simulator and its use are available [here](2026_edition/Simulator/README.md).
 + A FAQ is available [here](FAQ.md).
 + A forum will be opened if needed.
 The IMIC organization team will make its best to keep the participants informed of any important context modifications, but team members are advised to come on these pages regurlarly to check for any changes.
