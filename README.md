@@ -55,6 +55,12 @@ The submission should include :
 ### *From July to September* : Evaluation and validation of the contestants' proposals 
 The different proposals will be evaluated on different criteria related to the quality of the solution but also The quality, rigor, and care taken in the publication.
 
+## Previous work
+Because it is the second edition we suggest you to work on Flexibac, please find some previous work on the same problem:
+Flexibac is manly inspired from a real problem which was studied during a PhD thesis. You can find [here](https://theses.hal.science/tel-03789818v1) the public work. Be carreful, current Flexibac is a simplification from the real industrial problem presented in the PhD manuscript.
+Las year, two teams solved one instance of Flexibac. You can download their work in this git.
+Feel free to use (or not) previous work!
+
 ## Contest prizes
 To be announced.
 
