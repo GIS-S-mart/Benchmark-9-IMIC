@@ -22,7 +22,7 @@ These decisions directly impact both the system's throughput and the reduction o
 
 This benchmark study bridges both qualitative and quantitative research approaches, with a primary focus on operational performance metrics while carefully considering real-world practical constraints. Positioned at the intersection of intelligent manufacturing control, operational research, industrial automation, industrial engineering, and logistics optimization, the study aims to enhance the design and control strategies of robotic mail sorting systems while simultaneously addressing the critical need to reduce human physical strain. The contribution is twofold: (i) theoretical, through advancing knowledge in robotic control strategies, and (ii) empirical, by delivering practical solutions ready for industrial implementation. The research seeks to validate scheduling algorithms, planification and decision-making processes specifically designed for robot-assisted sorting systems. The expected outcomes include optimal or near-optimal solutions that will maximize robotic handling efficiency while minimizing both manual operations and cart changes, ultimately providing a comprehensive framework for improving automated mail sorting operations.
 
-A synthetic [presentation of the contest](Students_Presentation.pdf), to be used to introduce the contest to the teams is available [here](Students_Presentation.pdf).
+A synthetic [presentation of the contest](2026_edition/Presentation_IMIC26.pdf), to be used to introduce the contest to the teams is available [here](2026_edition/Presentation_IMIC26.pdf).
 
 ## Glossary
 
