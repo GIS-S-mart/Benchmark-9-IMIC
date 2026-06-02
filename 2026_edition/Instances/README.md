@@ -9,4 +9,4 @@ This folder contains the description of the instances of IMIC'25, named this way
 
 ---
 
-> **Note**: The instances can be updated regularly. Last release: 2025/02/14
+> **Note**: The instances can be updated regularly. Last release: 2026/06/02
