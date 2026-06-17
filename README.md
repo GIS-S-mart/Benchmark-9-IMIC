@@ -47,7 +47,7 @@ The following pages are available for team members to access and use :
 The IMIC organization team will make its best to keep the participants informed of any important context modifications, but team members are advised to come on these pages regurlarly to check for any changes.
 
 ### *End of June* : Submission of the contestants' proposals
-The different proposal have to be submitted before **June, 30, 2026**. The organizing team will not consider proposals coming after this deadline.
+The different proposal have to be submitted before **June, 26, 2026**. The organizing team will not consider proposals coming after this deadline.
 The submission should include :
 + A short paper describing the methodology followed to obtain the solution.
 + The input files needed to check the solution via the simulator (for more information, see the problem page).
