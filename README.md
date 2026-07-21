@@ -55,7 +55,7 @@ The theme was announced during the SOHOMA 2025 conference. The Flexibac+ problem
 
 Flexibac+ takes up last year's theme with a view to pushing for the resolution of all available instances.
 
-More details on the problem are available [here](2026_edition/The_Flexibac_Problem.md).
+More details on the problem are available [here](tree/2026-edition/2026_edition/The_Flexibac_Problem.md).
 ### 2025 Previous : The Flexibac problem (comment faire les liens ?)
 
 
