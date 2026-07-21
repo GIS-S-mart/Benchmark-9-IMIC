@@ -9,20 +9,6 @@ To do so, the IMIC aims, each year, to propose a manufacturing problem submitted
 Results of the contest will then be considered as candidate solutions of the proposed problem, and will be compared and archived as a new benchmark instance.
 In a couple of years, IMIC is expected to become a reference benchmark for the community.
 
-## Second edition's theme: The Flexibac problem + (PLUS)
-<p align="center">
-  <img width="400" alt="image" src="https://github.com/user-attachments/assets/823f3625-083a-44c9-887a-419b30529866" />
-</p>
-The theme was announced during the SOHOMA 2025 conference. The Flexibac+ problem is an evolution of the first problem proposed for the first IMIC edition. In 2025, the different proposals oly adressed 2.5% of the total number of instances. Moreover over, only online solutions were proposed.
-
-<p align="center">
-  <img width="600" alt="image" src="https://github.com/user-attachments/assets/8807c454-855e-4279-828f-84080bbcf3c0" />
-</p>
-
-Flexibac+ takes up last year's theme with a view to pushing for the resolution of all available instances.
-
-More details on the problem are available [here](2026_edition/The_Flexibac_Problem.md).
-
 ## Important dates
 People interested in joining the contest should consider the following planning
 ![agenda](./images/VisuelIMIC26.PNG)
@@ -55,13 +41,23 @@ The submission should include :
 ### *From July to September* : Evaluation and validation of the contestants' proposals 
 The different proposals will be evaluated on different criteria related to the quality of the solution but also The quality, rigor, and care taken in the publication.
 
-## Previous work
-Because it is the second edition we suggest you to work on Flexibac, please find some previous work on the same problem:
+## Editions:
+### 2027 "Current": Dynalog (ajouter le lien)
+### 2026 Previous : The Flexibac problem + (PLUS)
+<p align="center">
+  <img width="400" alt="image" src="https://github.com/user-attachments/assets/823f3625-083a-44c9-887a-419b30529866" />
+</p>
+The theme was announced during the SOHOMA 2025 conference. The Flexibac+ problem is an evolution of the first problem proposed for the first IMIC edition. In 2025, the different proposals oly adressed 2.5% of the total number of instances. Moreover over, only online solutions were proposed.
 
-+ Flexibac is manly inspired from a real problem which was studied during a PhD thesis. You can find [here](https://theses.hal.science/tel-03789818v1) the public work. Be carreful, current Flexibac is a simplification from the real industrial problem presented in the PhD manuscript.
-+ Last year, two teams solved one instance of Flexibac. You can download their work in this git: [here](Previous_work/)
+<p align="center">
+  <img width="600" alt="image" src="https://github.com/user-attachments/assets/8807c454-855e-4279-828f-84080bbcf3c0" />
+</p>
 
-Feel free to use (or not) previous work!
+Flexibac+ takes up last year's theme with a view to pushing for the resolution of all available instances.
+
+More details on the problem are available [here](2026_edition/The_Flexibac_Problem.md).
+### 2025 Previous : The Flexibac problem (comment faire les liens ?)
+
 
 ## Contest prizes
 To be announced.
