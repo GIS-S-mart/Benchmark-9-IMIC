@@ -15,31 +15,31 @@ People interested in joining the contest should consider the following planning
 
 ### *From September to May* : Registration and team formation
 Registration is opened from September to May.
-Early registrations are opened until the 15th of November 2025.
+Early registrations are opened until the 15th of November 2026.
 Late registration : May.
 Contest results will be due by the end of June 2026.
 
-Teams should registered to the contest via an online form available [here](https://forms.office.com/e/R06t6rwXTC).
+Teams should registered to the contest via an online form available [here](https://forms.office.com/e/R06t6rwXTC). *** METTRE A JOUR LE LIEN ***
 There are no limitations in the number of members in team, that could be constituted of students, industrials or academics.
 The registration is completely free.
 
 ### *From October to May* : Development of solutions, interactions via mail or the web platform
 This Github page is the container of all information related to IMIC.
 The following pages are available for team members to access and use :
-+ The problem is detailed [here](2026_edition/The_Flexibac_Problem.md).
-+ A simulator is provided to the teams for testing their tentative solutions. All information about the simulator and its use are available [here](2026_edition/Simulator/README.md).
++ The problem is detailed [here](2026_edition/The_Flexibac_Problem.md). *** METTRE A JOUR LE LIEN OU SUPPRIMER parce que déjà plus bas ***
++ A simulator is provided to the teams for testing their tentative solutions. All information about the simulator and its use are available [here](2026_edition/Simulator/README.md). *** METTRE A JOUR LE LIEN ***
 + A FAQ is available [here](FAQ.md).
 + A forum will be opened if needed.
 The IMIC organization team will make its best to keep the participants informed of any important context modifications, but team members are advised to come on these pages regurlarly to check for any changes.
 
 ### *End of June* : Submission of the contestants' proposals
-The different proposal have to be submitted before **June, 26, 2026**. The organizing team will not consider proposals coming after this deadline.
+The different proposal have to be submitted before **June, 25, 2027**. The organizing team will not consider proposals coming after this deadline.
 The submission should include :
-+ A short paper describing the methodology followed to obtain the solution.
++ A short paper describing the methodology followed to obtain the solution, with summarized results in the paper, + all detailed results in appendix.
 + The input files needed to check the solution via the simulator (for more information, see the problem page).
 
 ### *From July to September* : Evaluation and validation of the contestants' proposals 
-The different proposals will be evaluated on different criteria related to the quality of the solution but also The quality, rigor, and care taken in the publication.
+The different proposals will be evaluated on different criteria related to the quality of the solution but also the quality, rigor, and care taken in the publication.
 
 ## Editions:
 ### 2027 "Current": Dynalog (ajouter le lien)
