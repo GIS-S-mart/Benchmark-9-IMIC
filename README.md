@@ -19,7 +19,7 @@ Early registrations are opened until the 15th of November 2026.
 Late registration : May.
 Contest results will be due by the end of June 2026.
 
-Teams should registered to the contest via an online form available [here](https://forms.office.com/e/R06t6rwXTC). *** METTRE A JOUR LE LIEN ***
+Teams should registered to the contest via an online form available [here](https://forms.office.com/e/R06t6rwXTC). ***METTRE A JOUR LE LIEN***
 There are no limitations in the number of members in team, that could be constituted of students, industrials or academics.
 The registration is completely free.
 
@@ -55,7 +55,7 @@ The theme was announced during the SOHOMA 2025 conference. The Flexibac+ problem
 
 Flexibac+ takes up last year's theme with a view to pushing for the resolution of all available instances.
 
-More details on the problem are available [here](tree/2026-edition/2026_edition/The_Flexibac_Problem.md).
+More details on the problem are available [here](https://github.com/NathalieKlement/projet/tree/2026-edition/2026_edition/The_Flexibac_Problem.md).
 ### 2025 Previous : The Flexibac problem (comment faire les liens ?)
 
 
