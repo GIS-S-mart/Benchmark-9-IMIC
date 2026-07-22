@@ -62,10 +62,10 @@ Next is a diagram of the different levels and components for a simple warehouse 
 -    ten bays per aisle, each with five slots (5 on the right and 5 on the left), with one depth for each slot.	
 
 The following figure is a schematic representation of the warehouse - View of floor-level components. 
-![image](../images/Schema.png)
+![image](../images/Schema.jpg)
 
 The next figure is a schematic representation of the storage locations in each tube for each aisle.
-![image](../images/Baies.png)
+![image](../images/Baies.jpg)
 
 # System Constraints
 In addition to the structural data provided above, the system imposes the following constraints:
@@ -82,7 +82,50 @@ In order to test and compare the project’s various algorithms, it is necessary
 To model realistic inventory, we consider two pieces of information about SKUs:
 - The presence of an SKU in inventory and in orders follows a “popularity” or skewness pattern. In other words, not every product has the same probability of being ordered; some products are more popular (in demand) and are therefore stocked in greater quantities.
 - Each SKU has weight/volume data that allows them to be sorted into three categories: M1 for the heaviest, M2 for medium, and M3 for the lightest. This category is used to organize outgoing pallets: packages containing SKUs in category M1 are placed first on the pallet, followed by M2, and then M3.
-![image](../images/Stock.png)
+The popularity distribution of SKUs follows an exponential distribution, as shown in the image below:
+![image](../images/Stock.jpg)
+
+When a test scenario is generated, the number of distinct SKUs is provided, along with the parameter q of an q_exponential distribution, which is used to set the slope of the popularity curve. Each SKU is then assigned a popularity value as shown in the image above.
+We also consider the case where all SKUs have the same popularity—a value of 1, for example—following a uniform distribution.
+Next, each SKU is also assigned a weight/volume class—M1, M2, or M3—with equal probability. Thus, each SKU has popularity and weight information, which are subsequently used to consistently generate the output pallets, followed by the initial inventory and the input pallets.
+
+# Inventory Data Structure Management
+The initial inventory is represented by a list of SKUs, without specific locations within the inventory. When a scenario is run by the framework, these locations are initialized by calling the “scheduler.” This ensures that the initial inventory layout is consistent with the scheduling algorithm used in the scenario.
+The inventory is therefore represented as a dictionary, associating each SKU with one or more storage locations. A storage location is an object defined.
+
+# Mission
+FIVES XCELLA uses input scenarios that model two types of tasks:
+- IN Task: involves storing an item in inventory after it arrives at an IN Base at a picking station (PS, after depalletizing).
+- OUT Task: involves removing an item from inventory in response to an order and placing it on one of the OUT bases at a drop-off station (DS) to assemble a pallet. The bins containing the items are placed on the OUT bases according to a strict priority order (rank) for filling the pallet.
+This helps balance the pallet and the products; for example, water pack SKUs have the highest priority and are placed on the pallet first (heavier items on the bottom), while potato chips have the lowest priority and are placed last (lighter items on top).
+These two types of tasks should be performed consecutively whenever possible: IN followed by OUT, provided that the package for the IN task is placed in the same TUBE as the package to be picked for the OUT task.
+
+The steps in an IN operation are as follows:
+-    A homogeneous pallet is placed on the picking station (PS) of a depalletizing robot. The robot removes the packages/bins and places them on one or more conveyors feeding the IN Bases;
+-    An AGV positions itself at an IN Base to retrieve a bin containing the item to be stored;
+-    The AGV transports the bin to its destination: it travels from the IN Base to the corresponding Xcalator, then ascends to the floor where the assigned storage location is located;
+-    The AGV enters the TUBE to reach the storage location;
+-    Once it arrives at the node, it places the bin in the designated slot (left or right, depth 1 or 2);
+-    The IN mission is then complete. The AGV may or may not immediately receive a new mission and then descend from the warehouse back to the picking area.
+
+The steps of an OUT mission are as follows:
+-    The AGV travels to the location of the bin to be picked from the warehouse. To do this, it takes the corresponding Xcalator (if necessary), then goes up to the floor where the assigned location is;
+-    The AGV retrieves the target bin;
+-    Once loaded, the AGV proceeds to the descending Xcalator to return to the ground floor and the assigned drop-off station (DS linked to the pallet requesting the bin’s reference number);
+-    The AGV unloads the bin onto one of the OUT Bases associated with the DS, following a priority order (rank) for filling the pallet.
+-    The bin is retrieved by the palletizing robot from the conveyor and placed onto the corresponding pallet;
+-    The OUT mission is then complete. The AGV can immediately receive a new mission (IN or OUT).
+
+## Fixed parameters for the missions under consideration:
+-    Outbound pallets are uniformly sized at 50 bins
+-    Inbound pallets may be partially depalletized in batches of 10 to 20 bins
+-    The priority order of bins on OUT missions is a parameter called “rank”; it corresponds to the mass/volume of the reference (M1 has the highest priority, M2 and M3 have lower priority). A low rank indicates high priority; therefore, the rank takes a value from 0 to 49 (the rank is reset to 0 for each new pallet).
+-    Upon arrival at the picking stations (PS), each bin to be stored is assigned to an IN Base. It will be available during the IN operation at the designated IN Base.
+-    Upon departure from the drop-off stations (DS), OUT Bases are not differentiated for bin assignment. OUT tasks provide the DS information, and the AGVs deposit the bins at the first available OUT Base, following the order determined by the bin’s position on the pallet. The OUT palletizing robots are capable of rearranging the order of two consecutive bins (maximum position error of 1).
+
+# KPI
+
+# Outcome
 
 
 
