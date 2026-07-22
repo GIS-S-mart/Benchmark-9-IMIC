@@ -4,7 +4,7 @@ This solution highlights the importance of inventory management, as well as task
 
 ![image](../images/Xcella.jpg)
 
-# Warehouse Modeling
+# Warehouse Description
 The warehouses in the FIVES XCELLA solution organize product inventory into aisles with levels featuring elevators for ascending on one side and descending on the other. These levels are themselves organized into racks—units containing a certain number of storage locations for packages. Each bay is separated by shelf supports.
 
 In addition to the storage area, there is a floor space dedicated to order picking and order preparation. Depalletizing robots place packages to be stored onto conveyors so that AGVs can retrieve them at collection points (IN Bases). Similarly, palletizing robots retrieve packages to be removed from inventory onto conveyors, which are fed by packages deposited by the AGVs at drop-off points (Bases OUT). We assume that the overall inbound and outbound throughput rates are equal, such that the average number of products in inventory remains constant.
@@ -36,4 +36,28 @@ To ensure clear communication and shared understanding among all stakeholders, t
 | Palletizing Robot                | Creates mixed pallets from bins coming from one or more conveyors fed by the OUT Stations                    |
 | AGV                              | Autonomous mobile robot responsible for transporting bins within the warehouse                               |
 
+# Modeling
+Each edge of the graph represents a route that an AGV can take to move through the warehouse. An edge can be:
+-    directed (traveled in only one direction), if it is on the warehouse floor;
+-   undirected (traveled in both directions), if it is in the TUBES (storage levels)
+
+And each node in the graph represents either a route intersection or a point of interest where an AGV can perform an ACTION.
+An ACTION can be:
+-    Picking up a package: either from an IN Base or from a location in a tube
+-    Dropping off a package: either at an OUT Base or at a location in a tube
+-    Attaching to an elevator (Xcalator)
+-    Detach from an elevator (Xcalator)
+-    Board an elevator (Xcalator) to go up to a tube level in the warehouse
+-    Board an elevator (Xcalator) to go down to the ground floor
+-    Move between two nodes in the graph
+-    Change direction: along a curved path
+-    Wait at a graph node
+
+We distinguish between the warehouse ground level and the storage floor levels; in fact, each floor has only one path per aisle (TUBE), which simplifies the planning stage.
+
+Here is a diagram of the different levels and components for a simple warehouse with:
+-    three aisles and three parallel routes per aisle beneath the storage area;
+-    one depalletizing robot (picking station) with 4 Base INs;
+-    two palletizing robots (deposit stations) with two Base OUTs each;
+-    ten bays per aisle, each with five slots (5 on the right and 5 on the left), with two depths for each slot.	
 
