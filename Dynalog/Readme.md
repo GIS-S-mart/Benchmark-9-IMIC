@@ -75,9 +75,6 @@ In addition to the structural data provided above, the system imposes the follow
 -    The order in which bins are sent to the palletizing conveyors must be followed;
 -    A maximum of one AGV per graph node and a minimum distance of 10 cm between AGVs at all times (applies whether AGVs are following one another or crossing paths on two parallel routes)
 
-# Data: Modeling and Generating Test Scenarios - Inventory and Missions
-In order to test and compare the project’s various algorithms, it is necessary to formalize test datasets in the form of representative scenarios. These scenarios reflect two aspects in particular: the representation of a realistic warehouse inventory and the management of tasks to be performed by AGVs in the form of coherent missions. These dataset will be given to the contestants.
-
 # Inventory and SKUs
 To model realistic inventory, we consider two pieces of information about SKUs:
 - The presence of an SKU in inventory and in orders follows a “popularity” or skewness pattern. In other words, not every product has the same probability of being ordered; some products are more popular (in demand) and are therefore stocked in greater quantities.
@@ -89,7 +86,6 @@ When a test scenario is generated, the number of distinct SKUs is provided, alon
 We also consider the case where all SKUs have the same popularity—a value of 1, for example—following a uniform distribution.
 Next, each SKU is also assigned a weight/volume class—M1, M2, or M3—with equal probability. Thus, each SKU has popularity and weight information, which are subsequently used to consistently generate the output pallets, followed by the initial inventory and the input pallets.
 
-# Inventory Data Structure Management
 The initial inventory is represented by a list of SKUs, without specific locations within the inventory. When a scenario is run by the framework, these locations are initialized by calling the “scheduler.” This ensures that the initial inventory layout is consistent with the scheduling algorithm used in the scenario.
 The inventory is therefore represented as a dictionary, associating each SKU with one or more storage locations. A storage location is an object defined.
 
@@ -116,16 +112,38 @@ The steps of an OUT mission are as follows:
 -    The bin is retrieved by the palletizing robot from the conveyor and placed onto the corresponding pallet;
 -    The OUT mission is then complete. The AGV can immediately receive a new mission (IN or OUT).
 
-## Fixed parameters for the missions under consideration:
+## Fixed parameters for the missions under consideration
 -    Outbound pallets are uniformly sized at 50 bins
 -    Inbound pallets may be partially depalletized in batches of 10 to 20 bins
 -    The priority order of bins on OUT missions is a parameter called “rank”; it corresponds to the mass/volume of the reference (M1 has the highest priority, M2 and M3 have lower priority). A low rank indicates high priority; therefore, the rank takes a value from 0 to 49 (the rank is reset to 0 for each new pallet).
 -    Upon arrival at the picking stations (PS), each bin to be stored is assigned to an IN Base. It will be available during the IN operation at the designated IN Base.
 -    Upon departure from the drop-off stations (DS), OUT Bases are not differentiated for bin assignment. OUT tasks provide the DS information, and the AGVs deposit the bins at the first available OUT Base, following the order determined by the bin’s position on the pallet. The OUT palletizing robots are capable of rearranging the order of two consecutive bins (maximum position error of 1).
 
-# KPI
+# Input: Test Scenarios - Inventory and Missions
+In order to test and compare the project’s various algorithms, it is necessary to formalize test datasets in the form of representative scenarios. These scenarios reflect two aspects in particular: the representation of a realistic warehouse inventory and the management of tasks to be performed by AGVs in the form of coherent missions. These dataset will be given to the contestants.
 
-# Outcome
+The list of IN/OUT tasks over a 2-hour period will be given, in JSON format, including the following information:
+-    IN tasks: SKU, storage location, PS where to pick up the bin
+-    OUT tasks: SKU, storage locations (all locations where the requested SKU is located), DS where to drop off the bin, row, date by which the pallet must be complete
+
+A FlexSim model of the given structure with a dashboard  will allow participants to test their solutions directly in the evaluation tool.
+
+# Decision and KPI
+The model developed by the participating teams must make the following decisions:
+-    Where to store (IN)?
+-    Where to retrieve (OUT)?
+-    Which AGV for which task?
+-    In what order should the tasks be executed?
+
+Specific KPIs will be defined soon. Currently, some relevant KPIs are : delay and computation time.
+
+# Output
+Develop a management strategy using a combination of algorithms to achieve an optimal solution with the best possible performance metrics.
+
+Expected deliverables are the following:
+-    A list of scheduled tasks with their allocations (to be sent to FlexSim)
+-    A storage location of SKUs over time
+-    A report explaining the implemented logic and justifying the choice of algorithms (respecting SOHOMA template)
 
 
 
