@@ -19,14 +19,14 @@ Early registrations are opened until the 15th of November 2026.
 Late registration : May.
 Contest results will be due by the end of June 2026.
 
-Teams should registered to the contest via an online form available [here](https://forms.office.com/e/R06t6rwXTC). ***METTRE A JOUR LE LIEN***
+Teams should registered to the contest via an online form available [here](https://forms.office.com/e/LajmkM79Wn). 
 There are no limitations in the number of members in team, that could be constituted of students, industrials or academics.
 The registration is completely free.
 
 ### *From October to May* : Development of solutions, interactions via mail or the web platform
 This Github page is the container of all information related to IMIC.
 The following pages are available for team members to access and use :
-+ The problem is detailed [here](2026_edition/The_Flexibac_Problem.md). *** METTRE A JOUR LE LIEN OU SUPPRIMER parce que déjà plus bas ***
++ The problem is detailed [here](Dynalog/Readme.md). 
 + A simulator is provided to the teams for testing their tentative solutions. All information about the simulator and its use are available [here](2026_edition/Simulator/README.md). *** METTRE A JOUR LE LIEN ***
 + A FAQ is available [here](FAQ.md).
 + A forum will be opened if needed.
@@ -42,8 +42,10 @@ The submission should include :
 The different proposals will be evaluated on different criteria related to the quality of the solution but also the quality, rigor, and care taken in the publication.
 
 ## Editions:
-### 2027 "Current": Dynalog (ajouter le lien)
-### 2026 Previous : The Flexibac problem + (PLUS)
+### 2027: Dynalog
+The problem is detailed [here](Dynalog/Readme.md). 
+
+### 2026: The Flexibac problem + (PLUS)
 <p align="center">
   <img width="400" alt="image" src="https://github.com/user-attachments/assets/823f3625-083a-44c9-887a-419b30529866" />
 </p>
@@ -56,8 +58,9 @@ The theme was announced during the SOHOMA 2025 conference. The Flexibac+ problem
 Flexibac+ takes up last year's theme with a view to pushing for the resolution of all available instances.
 
 More details on the problem are available [here](https://github.com/GIS-S-mart/Benchmark-9-IMIC/tree/2026-edition).
-### 2025 Previous : The Flexibac problem (comment faire les liens ?)
-
+### 2025: The Flexibac problem
+The first edition was about the Flexibac problem. 
+More details on the problem are available [here](https://github.com/GIS-S-mart/Benchmark-9-IMIC/tree/main).
 
 ## Contest prizes
 To be announced.
