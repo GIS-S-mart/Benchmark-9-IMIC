@@ -20,7 +20,7 @@ To ensure clear communication and shared understanding among all stakeholders, t
 | :------------------------------: | :----------------------------------------------------------------------------------------------------------: | 
 |  Stock                           | A system of racks organized into aisles, levels, and bays (each aisle has N bays) for storing bins           | 
 |  Tubes                           | Horizontal levels of the storage racks, which serve as the AGV traffic lanes on each floor                   | 
-|  Baies                           | Furniture organizing the aisles: grouping storage locations. Each bay has 5 storage locations per level (nodes) accessible from the central tube (on the corresponding level)       |
+|  Bays                           | Furniture organizing the aisles: grouping storage locations. Each bay has 5 storage locations per level (nodes) accessible from the central tube (on the corresponding level)       |
 |  Location                        | A storage location capable of holding one bin or package, accessible from a position within a tube (node), to the right or left across two levels of depth                             |
 |  Container / package / Bin       | Individual containers stored in locations, each dedicated to a single item number                            |
 |  Product reference (SKU)         | A unique item reference used to identify the contents of a bin. A bin can contain only one reference, but multiple stock locations may have the same reference (redundancy). Example: reference “597631” for “Evian water packs.”                                                        |
