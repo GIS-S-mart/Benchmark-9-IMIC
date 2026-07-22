@@ -17,7 +17,7 @@ People interested in joining the contest should consider the following planning
 Registration is opened from September to May.
 Early registrations are opened until the 15th of November 2026.
 Late registration : May.
-Contest results will be due by the end of June 2026.
+Contest results will be due by the end of June 2027.
 
 Teams should registered to the contest via an online form available [here](https://forms.office.com/e/LajmkM79Wn). 
 There are no limitations in the number of members in team, that could be constituted of students, industrials or academics.
