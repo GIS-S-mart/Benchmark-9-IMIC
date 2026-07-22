@@ -46,18 +46,10 @@ The different proposals will be evaluated on different criteria related to the q
 The problem is detailed [here](Dynalog/Readme.md). 
 
 ### 2026: The Flexibac problem + (PLUS)
-<p align="center">
-  <img width="400" alt="image" src="https://github.com/user-attachments/assets/823f3625-083a-44c9-887a-419b30529866" />
-</p>
-The theme was announced during the SOHOMA 2025 conference. The Flexibac+ problem is an evolution of the first problem proposed for the first IMIC edition. In 2025, the different proposals oly adressed 2.5% of the total number of instances. Moreover over, only online solutions were proposed.
-
-<p align="center">
-  <img width="600" alt="image" src="https://github.com/user-attachments/assets/8807c454-855e-4279-828f-84080bbcf3c0" />
-</p>
-
+The theme was announced during the SOHOMA 2025 conference. The Flexibac+ problem is an evolution of the first problem proposed for the first IMIC edition. In 2025, the different proposals oly adressed 2.5% of the total number of instances. Moreover, only online solutions were proposed.
 Flexibac+ takes up last year's theme with a view to pushing for the resolution of all available instances.
-
 More details on the problem are available [here](https://github.com/GIS-S-mart/Benchmark-9-IMIC/tree/2026-edition).
+
 ### 2025: The Flexibac problem
 The first edition was about the Flexibac problem. 
 More details on the problem are available [here](https://github.com/GIS-S-mart/Benchmark-9-IMIC/tree/main).
