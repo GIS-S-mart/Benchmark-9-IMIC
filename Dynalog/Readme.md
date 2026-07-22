@@ -1,15 +1,36 @@
-Le projet **DYNALOG** s’inscrit dans un cadre de l’intra-logistique et de la robotisation d’entrepôts, où des robots mobiles répondent aux besoins de flexibilité et de performance des entreprises. En particulier, le projet porte sur l’étude de la solution de FIVES XCELLA, où la gestion des commandes est assurée par une flotte d’AGV capables de circuler et d’accéder aux rayonnages de l’entrepôt à travers un ensemble d’ascenseurs afin d’y récupérer ou d’y déposer des colis. Il s’agit d’une solution dite « case picking », méthode qui consiste à prélever une caisse complète d’un produit (bac ou colis) plutôt qu'une seule unité, pour soit être rangée dans le stock de l’entrepôt soit composer une commande de sortie (palette).
+The **DYNALOG** project is part of the field of intralogistics and warehouse automation, where mobile robots meet companies’ needs for flexibility and performance. Specifically, the project focuses on evaluating FIVES XCELLA’s solution, in which order fulfillment is handled by a fleet of AGVs capable of navigating and accessing warehouse racks via a system of elevators to retrieve or deposit packages. This is a “case picking” solution, a method that involves picking a complete case of a product (bin or package) rather than a single unit, either to be stored in the warehouse or to assemble an outbound order (pallet).
 
-Cette solution met en évidence l’importance de la gestion du stock ainsi que de l’ordonnancement des tâches et du choix des chemins des AGV. 
+This solution highlights the importance of inventory management, as well as task scheduling and the selection of AGV routes.
 
 ![image](../images/Xcella.jpg)
 
-Les entrepôts de la solution FIVES XCELLA organise le stock de produit en allées avec des étages possédant des ascenseurs de montée d’un côté et de descente de l’autre. Ces étages sont eux-mêmes organisés sous forme de baies, meuble possédant un certain nombre d’emplacements pour disposer les colis. Chaque baie est séparée par les supports des étagères.  
+# Warehouse Modeling
+The warehouses in the FIVES XCELLA solution organize product inventory into aisles with levels featuring elevators for ascending on one side and descending on the other. These levels are themselves organized into racks—units containing a certain number of storage locations for packages. Each bay is separated by shelf supports.
 
-En plus du stock, est présente une zone au sol pour la partie préparation du stock et des commandes. Des robots dé-palettiseurs déposent les colis à stocker sur des convoyeurs pour que les AGV les récupèrent sur des points de collecte (Bases IN). De même, des robots palettiseurs récupèrent les colis à sortir du stock sur des convoyeurs, alimentés par les colis déposés par les AGV sur des points de dépose (Bases OUT). Nous supposons que les débits globaux en entrée et sortie sont égaux ; de telle sorte que le nombre de produits présents dans le stock soit constant en moyenne.
+In addition to the storage area, there is a floor space dedicated to order picking and order preparation. Depalletizing robots place packages to be stored onto conveyors so that AGVs can retrieve them at collection points (IN Bases). Similarly, palletizing robots retrieve packages to be removed from inventory onto conveyors, which are fed by packages deposited by the AGVs at drop-off points (Bases OUT). We assume that the overall inbound and outbound throughput rates are equal, such that the average number of products in inventory remains constant.
 
-Les AGV peuvent se déplacer dans l’entrepôt en roulant au sol, emprunter les ascenseurs (Xcalator) pour accéder aux étages et se déplacer sur les rails. L’ensemble des déplacements autorisés par les AGV est modélisé par un graphe orienté. Les nœuds du graphe représentent les points d’intérêt au sol ou dans le stock. 
+The AGVs can move through the warehouse by traveling on the floor, using elevators (Xcalator) to access upper levels, and traveling on rails. All movements permitted by the AGVs are modeled as a directed graph. The nodes of the graph represent points of interest on the floor or within the warehouse.
 
-Le tableau ci-dessous présente les éléments principaux de l’entrepôt avec leur description et leur abréviation pour leur utilisation.
+# Glossary
 
+To ensure clear communication and shared understanding among all stakeholders, this section provides definitions of key terms and parameters used throughout the problem description. 
+
+
+|      **Key terms**               |                                      **Definition**                                                          | 
+| :------------------------------: | :----------------------------------------------------------------------------------------------------------: | 
+|  Stock                           | A system of racks organized into aisles, levels, and bays (each aisle has N bays) for storing bins           | 
+|  Tubes                           | Horizontal levels of the storage racks, which serve as the AGV traffic lanes on each floor                   | 
+|  Baies                           | Furniture organizing the aisles: grouping storage locations. Each bay has 5 storage locations per level (nodes) accessible from the central tube (on the corresponding level)       |
+|  Location                        | A storage location capable of holding one bin or package, accessible from a position within a tube (node), to the right or left across two levels of depth                             |
+|  Container / package / Bin       | Individual containers stored in locations, each dedicated to a single item number                            |
+|  Product reference (SKU)         | A unique item reference used to identify the contents of a bin. A bin can contain only one reference, but multiple stock locations may have the same reference (redundancy). Example: reference “597631” for “Evian water packs.”                                                        |
+|  Upward Elevator: Xcalator IN    |  An elevator at the entrance to the aisle that allows AGVs to travel up to the tubes.                        |
+|  Downward elevator: Xcalator OUT | A lift at the end of the aisle that allows AGVs to return to ground level                                    |
+|  Base IN                         |  Collection point where AGVs pick up bins to be put into stock from a picking station                        |
+|  Base OUT                        |  Drop-off point where AGVs deposit bins to be removed from inventory at a Depose Station                     |
+|  Picking Stations IN             |  All IN bases and infeed conveyors associated with a depalletizing robot                                     |
+|  OUT Drop-Off Stations           |  All OUT bases and exit conveyors associated with a palletizing robot                                        |
+|  Consistent palette              |  Pallet consisting of bins with the same part number                                                         |
+|  Mixed Pallet                    |Pallet consisting of bins containing items with different part numbers                                        |
+|  Depalletizing Robot             | Depalletizes homogeneous pallets and places the bins onto one or more conveyors feeding the IN Bases         |
 
