@@ -4,4 +4,5 @@ Cette solution met en évidence l’importance de la gestion du stock ainsi que 
 <p align="center">
   <img width="600" alt="image" src="https://github.com/GIS-S-mart/Benchmark-9-IMIC/edit/2027-edition/images/Xcella.jpg" />
 </p>
+***Problème insertion image***
 
