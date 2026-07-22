@@ -31,6 +31,9 @@ To ensure clear communication and shared understanding among all stakeholders, t
 |  Picking Stations IN             |  All IN bases and infeed conveyors associated with a depalletizing robot                                     |
 |  OUT Drop-Off Stations           |  All OUT bases and exit conveyors associated with a palletizing robot                                        |
 |  Consistent palette              |  Pallet consisting of bins with the same part number                                                         |
-|  Mixed Pallet                    |Pallet consisting of bins containing items with different part numbers                                        |
+|  Mixed Pallet                    | Pallet consisting of bins containing items with different part numbers                                       |
 |  Depalletizing Robot             | Depalletizes homogeneous pallets and places the bins onto one or more conveyors feeding the IN Bases         |
+| Palletizing Robot                | Creates mixed pallets from bins coming from one or more conveyors fed by the OUT Stations                    |
+| AGV                              | Autonomous mobile robot responsible for transporting bins within the warehouse                               |
+
 
