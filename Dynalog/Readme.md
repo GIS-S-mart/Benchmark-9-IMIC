@@ -55,10 +55,35 @@ An ACTION can be:
 
 We distinguish between the warehouse ground level and the storage floor levels; in fact, each floor has only one path per aisle (TUBE), which simplifies the planning stage.
 
-Here is a diagram of the different levels and components for a simple warehouse with:
+Next is a diagram of the different levels and components for a simple warehouse with:
 -    Ten aisles and ten parallel routes per aisle beneath the storage area;
 -    one depalletizing robot (picking station) with ten Base INs;
 -    two palletizing robots (deposit stations) with two Base OUTs each;
--    ten bays per aisle, each with five slots (5 on the right and 5 on the left), with two depths for each slot.	
+-    ten bays per aisle, each with five slots (5 on the right and 5 on the left), with one depth for each slot.	
 
-![image](../images/Allees.png)
+The following figure is a schematic representation of the warehouse - View of floor-level components. 
+![image](../images/Schema.png)
+
+The next figure is a schematic representation of the storage locations in each tube for each aisle.
+![image](../images/Baies.png)
+
+# System Constraints
+In addition to the structural data provided above, the system imposes the following constraints:
+- One AGV per Xcalator at a time;
+-    Only one AGV per bay in the tubes, with a maximum of three AGVs per tube;
+-    A bin can contain only one SKU, but multiple stock locations may have the same SKU (redundancy);
+-    The order in which bins are sent to the palletizing conveyors must be followed;
+-    A maximum of one AGV per graph node and a minimum distance of 10 cm between AGVs at all times (applies whether AGVs are following one another or crossing paths on two parallel routes)
+
+# Data: Modeling and Generating Test Scenarios - Inventory and Missions
+In order to test and compare the project’s various algorithms, it is necessary to formalize test datasets in the form of representative scenarios. These scenarios reflect two aspects in particular: the representation of a realistic warehouse inventory and the management of tasks to be performed by AGVs in the form of coherent missions. These dataset will be given to the contestants.
+
+# Inventory and SKUs
+To model realistic inventory, we consider two pieces of information about SKUs:
+-     The presence of an SKU in inventory and in orders follows a “popularity” or skewness pattern. In other words, not every product has the same probability of being ordered; some products are more popular (in demand) and are therefore stocked in greater quantities.
+-     Each SKU has weight/volume data that allows them to be sorted into three categories: M1 for the heaviest, M2 for medium, and M3 for the lightest. This category is used to organize outgoing pallets: packages containing SKUs in category M1 are placed first on the pallet, followed by M2, and then M3.
+![image](../images/Stock.png)
+
+
+
+
