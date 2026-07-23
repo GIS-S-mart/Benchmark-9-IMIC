@@ -1,7 +1,7 @@
 The **DYNALOG** project is part of the field of intralogistics and warehouse automation, where mobile robots meet companies’ needs for flexibility and performance. Specifically, the project focuses on evaluating FIVES XCELLA’s solution, in which order fulfillment is handled by a fleet of AGVs capable of navigating and accessing warehouse racks via a system of elevators to retrieve or deposit packages. 
 A package is a container arising from a homogeneous pallet with one type of items, all the packages of one pallet have the same reference (SKU).
 
-![image](../images/schema_SKU.png) 
+![image](../images/schema SKU.png) 
 
 This solution highlights the importance of inventory management, as well as mission scheduling and the selection of AGV paths.
 
