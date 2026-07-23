@@ -147,6 +147,7 @@ Expected deliverables are the following:
 -    A storage location of SKUs over time
 -    A report explaining the implemented logic and justifying the choice of algorithms (respecting SOHOMA template)
 
-
+## References
+[Presentation of IMIC at the SAGIP 2026 congres](https://hal.science/hal-04770839)
 
 
