@@ -1,11 +1,11 @@
 The **DYNALOG** project is part of the field of intralogistics and warehouse automation, where mobile robots meet companies’ needs for flexibility and performance. Specifically, the project focuses on evaluating FIVES XCELLA’s solution, in which order fulfillment is handled by a fleet of AGVs capable of navigating and accessing warehouse racks via a system of elevators to retrieve or deposit packages. 
 A package is a container arising from a homogeneous pallet with one type of items, all the packages of one pallet have the same reference (SKU).
 
-![image](../images/schema_SKU.jpg) 
+![image](../images/schema_SKU.png) 
 
 This solution highlights the importance of inventory management, as well as mission scheduling and the selection of AGV paths.
 
-![image](../images/magasin_Xcella.jpg) 
+![image](../images/magasin_Xcella.png) 
 
 # Warehouse Description
 The warehouses in the FIVES XCELLA solution organize product inventory into alleys with levels featuring elevators for ascending on one side and descending on the other.
@@ -66,10 +66,10 @@ Next is a diagram of the different levels and components for a simple warehouse 
 -    10 bays per alley, each with 5 positions (nodes), giving an access to 5 locations on the right and 5 on the left.	
 
 The following figure is a schematic representation of the warehouse - View of floor-level components. **to be modified**
-![image](../images/schema_groundfloor_imic.jpg)
+![image](../images/schema_groundfloor_imic.png)
 
 The next figure is a schematic representation of the storage locations in each tube for each alley. **to be modified**
-![image](../images/schema_tubes_imic.jpg)
+![image](../images/schema_tubes_imic.png)
 
 # System Constraints
 In addition to the structural data provided above, the system imposes the following constraints:
