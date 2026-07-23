@@ -148,6 +148,6 @@ Expected deliverables are the following:
 -    A report explaining the implemented logic and justifying the choice of algorithms (respecting SOHOMA template)
 
 ## References
-[Presentation of IMIC at the SAGIP 2026 congres](https://hal.science/hal-04770839)
+[Presentation of IMIC at the SAGIP 2026 congres](Dynalog/IMIC_2027_Dynalog.pdf)
 
 
