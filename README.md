@@ -43,7 +43,7 @@ The different proposals will be evaluated on different criteria related to the q
 
 ## Editions:
 ### 2027: Dynalog
-The problem is detailed [here](Dynalog/ReadmeNU.md). 
+The theme was announced during the SAGIP 2026 congres, it will be presented also during the SOHOMA 2026 conference. The DYNALOG project is part of the field of intralogistics and warehouse automation, where mobile robots meet companies’ needs for flexibility and performance. Specifically, the project focuses on evaluating FIVES XCELLA’s solution, in which order fulfillment is handled by a fleet of AGVs capable of navigating and accessing warehouse racks via a system of elevators to retrieve or deposit packages. More details on the problem are available [here](Dynalog/ReadmeNU.md). 
 
 ### 2026: The Flexibac problem + (PLUS)
 The theme was announced during the SOHOMA 2025 conference. The Flexibac+ problem is an evolution of the first problem proposed for the first IMIC edition. In 2025, the different proposals only adressed 2.5% of the total number of instances. Moreover, only online solutions were proposed.
