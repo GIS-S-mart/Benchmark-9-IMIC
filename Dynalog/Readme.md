@@ -58,7 +58,7 @@ An ACTION can be:
 We distinguish between the warehouse ground level and the storage floor levels; in fact, each floor has only one path per aisle (TUBE), which simplifies the planning stage.
 
 Next is a diagram of the different levels and components for a simple warehouse with:
--    Ten aisles and ten parallel routes per aisle beneath the storage area;
+-    three aisles and three parallel routes per aisle beneath the storage area;
 -    one depalletizing robot (picking station) with ten Base INs;
 -    two palletizing robots (deposit stations) with two Base OUTs each;
 -    ten bays per aisle, each with five slots (5 on the right and 5 on the left), with one depth for each slot.	
