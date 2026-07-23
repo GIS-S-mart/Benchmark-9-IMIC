@@ -11,7 +11,7 @@ In addition to the storage area, there is a floor space dedicated to order picki
 
 The AGVs can move through the warehouse by traveling on the floor, using elevators (Xcalator) to access upper levels, and traveling on rails. All movements permitted by the AGVs are modeled as a directed graph. The nodes of the graph represent points of interest on the floor or within the warehouse.
 
-A video is avalaible https://www.youtube.com/watch?v=A7SbZuiYZvM to show the system.
+A video is avalaible [here](https://www.youtube.com/watch?v=A7SbZuiYZvM) to show the system.
 
 # Glossary
 
