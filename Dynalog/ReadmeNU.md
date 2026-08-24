@@ -76,9 +76,9 @@ The next figure is a schematic representation of the storage locations in each t
 # System Constraints
 In addition to the structural data provided above, the system imposes the following constraints:
 -   One AGV per elevator at a time;
-<!-- Only one AGV per bay, with a maximum of three AGVs per tube;-->
 -   A package can contain only one SKU, but multiple stock locations may have the same SKU (redundancy);
 -   The order in which packages are sent to the palletizing conveyors (OUT) must be followed;
+<!-- Only one AGV per bay, with a maximum of three AGVs per tube;-->
 <!-- A maximum of one AGV per graph node and a minimum distance of 10 cm between AGVs at all times (applies whether AGVs are following one another or crossing paths on two parallel paths)-->
 
 <!--# Inventory and SKUs
@@ -149,8 +149,9 @@ Develop a management strategy using a combination of algorithms to achieve an op
 
 Expected deliverables are the following:
 -    A list of scheduled missions with their allocations (to be sent to FlexSim)
-<!---    A list of storage locations of SKUs over time-->
 -    A report explaining the implemented logic and justifying the choice of algorithms (respecting SOHOMA template)
+<!---    A list of storage locations of SKUs over time-->
+
 
 # References
 [Presentation of IMIC at the SAGIP 2026 congres](IMIC_2027_Dynalog.pdf)
