@@ -149,7 +149,7 @@ Develop a management strategy using a combination of algorithms to achieve an op
 
 Expected deliverables are the following:
 -    A list of scheduled missions with their allocations (to be sent to FlexSim)
--    A list of storage locations of SKUs over time
+<!---    A list of storage locations of SKUs over time-->
 -    A report explaining the implemented logic and justifying the choice of algorithms (respecting SOHOMA template)
 
 # References
