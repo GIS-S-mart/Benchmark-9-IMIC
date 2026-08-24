@@ -81,7 +81,7 @@ In addition to the structural data provided above, the system imposes the follow
 -   The order in which packages are sent to the palletizing conveyors (OUT) must be followed;
 -   A maximum of one AGV per graph node and a minimum distance of 10 cm between AGVs at all times (applies whether AGVs are following one another or crossing paths on two parallel paths)
 
-# Inventory and SKUs
+<!--# Inventory and SKUs
 To model realistic inventory, we consider two pieces of information about SKUs:
 - The presence of an SKU in inventory and in orders follows a “popularity” or skewness pattern. In other words, not every product has the same probability of being ordered; some products are more popular (in demand) and are therefore stocked in greater quantities.
 - Each SKU has weight/volume data that allows them to be sorted into three categories: M1 for the heaviest, M2 for medium, and M3 for the lightest. This category is used to organize outgoing pallets: packages containing SKUs in category M1 are placed first on the pallet, followed by M2, and then M3.
@@ -93,7 +93,7 @@ We also consider the case where all SKUs have the same popularity—a value of 1
 Next, each SKU is also assigned a weight/volume class—M1, M2, or M3—with equal probability. Thus, each SKU has popularity and weight information, which are subsequently used to consistently generate the output pallets, followed by the initial inventory and the input pallets.
 
 The initial inventory is represented by a list of SKUs, without specific locations within the inventory. When a scenario is run by the framework, these locations are initialized by calling the “scheduler.” This ensures that the initial inventory layout is consistent with the scheduling algorithm used in the scenario.
-The inventory is therefore represented as a dictionary, associating each SKU with one or more storage locations. A storage location is an object defined.
+The inventory is therefore represented as a dictionary, associating each SKU with one or more storage locations. A storage location is an object defined.-->
 
 # Mission
 FIVES XCELLA uses input scenarios that model two types of missions:
