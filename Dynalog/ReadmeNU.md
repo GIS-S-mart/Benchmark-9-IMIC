@@ -76,10 +76,10 @@ The next figure is a schematic representation of the storage locations in each t
 # System Constraints
 In addition to the structural data provided above, the system imposes the following constraints:
 -   One AGV per elevator at a time;
-<!---   Only one AGV per bay, with a maximum of three AGVs per tube;-->
+<!-- Only one AGV per bay, with a maximum of three AGVs per tube;-->
 -   A package can contain only one SKU, but multiple stock locations may have the same SKU (redundancy);
 -   The order in which packages are sent to the palletizing conveyors (OUT) must be followed;
-<!---   A maximum of one AGV per graph node and a minimum distance of 10 cm between AGVs at all times (applies whether AGVs are following one another or crossing paths on two parallel paths)-->
+<!-- A maximum of one AGV per graph node and a minimum distance of 10 cm between AGVs at all times (applies whether AGVs are following one another or crossing paths on two parallel paths)-->
 
 <!--# Inventory and SKUs
 To model realistic inventory, we consider two pieces of information about SKUs:
