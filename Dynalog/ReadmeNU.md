@@ -1,17 +1,14 @@
-The **DYNALOG** project is part of the field of intralogistics and warehouse automation, where mobile robots meet companies’ needs for flexibility and performance. Specifically, the project focuses on evaluating FIVES XCELLA’s solution, in which order fulfillment is handled by a fleet of AGVs capable of navigating and accessing warehouse racks via a system of elevators to retrieve or deposit packages. 
+The **DYNALOG** project is part of intralogistics and warehouse automation, where mobile robots meet companies’ needs for flexibility and performance. Specifically, the project focuses on evaluating FIVES XCELLA’s solution, in which a fleet of AGVs handles order fulfillment by navigating and accessing warehouse racks via a system of elevators to retrieve or deposit packages. 
 A package is a container arising from a homogeneous pallet with one type of items, all the packages of one pallet have the same reference (SKU).
-
-![image](../images/schema_SKU.png) 
-
 This solution highlights the importance of inventory management, as well as mission scheduling and the selection of AGV paths.
 
 ![image](../images/magasin_Xcella.png) 
 
 # Warehouse Description
 The warehouses in the FIVES XCELLA solution organize product inventory into alleys with levels featuring elevators for ascending on one side and descending on the other.
-Each level in an alley, known as ‘tubes’, is divided in bays separated by shelving legs. Each bay contains a set of storage locations on either side of the tube.
+Each level in an alley, known as ‘tubes’, is divided into bays separated by shelving legs. Each bay contains a set of storage locations on either side of the tube.
 
-In addition to the storage area, there is a floor space dedicated to pick and deposite packages. Depalletizing robots place packages to be stored onto conveyors so that AGVs can retrieve them at collection points (IN Bases). Similarly, palletizing robots retrieve packages to be removed from inventory onto conveyors, which are fed by packages deposited by the AGVs at deposit points (Bases OUT). We assume that the overall inbound and outbound throughput rates are equal, such that the average number of products in inventory remains constant.
+In addition to the storage area, there is a floor space dedicated to pick and deposit packages. Depalletizing robots place packages to be stored onto conveyors so that AGVs can retrieve them at collection points (IN Bases). Similarly, palletizing robots retrieve packages to be removed from inventory onto conveyors, which are fed by packages deposited by the AGVs at deposit points (Bases OUT). We assume that the overall inbound and outbound throughput rates are equal, such that the average number of products in inventory remains constant.
 
 The AGVs can move through the warehouse by traveling on the floor, using elevators  to access upper levels, and traveling in tubes. All movements permitted by the AGVs are modeled as a directed graph. The nodes of the graph represent points of interest on the floor or within the warehouse.
 
@@ -42,12 +39,14 @@ To ensure clear communication and shared understanding among all stakeholders, t
 |  Palletizing Robot               | Prepares mixed pallets from packages coming from one or more conveyors fed by the OUT Base                 |
 |  AGV                             | Autonomous mobile robot responsible for transporting packages within the warehouse                         |
 
-# Modeling
+![image](../images/schema_SKU.png) 
+
+# Modelling
 Each edge of the graph represents a path that an AGV can take to move through the warehouse. An edge can be:
 -   directed (traveled in only one direction), if it is on the warehouse ground floor;
 -   undirected (traveled in both directions), if it is in the tubes (storage levels)
 
-And each node in the graph represents either a path intersection or a point of interest where an AGV can perform an ACTION.
+Each node in the graph represents either a path intersection or a point of interest where an AGV can perform an ACTION.
 An ACTION can be:
 -    Picking up a package: either from an IN Base or from a location in a tube
 -    Dropping off a package: either at an OUT Base or at a location in a tube
@@ -61,25 +60,29 @@ An ACTION can be:
 
 We distinguish between the warehouse ground level and the storage floor levels; in fact, each floor has only one path per alley (*i.e* tube), which simplifies the planning stage.
 
-Next is a diagram of the different levels and components for a simple warehouse with:
+Below, the warehouse layout for IMIC contest:
 -    10 alleys and 10 levels (10 tubes per alley) beneath the storage area;
 -    1 depalletizing robot (picking station) with 4 IN Bases;
 -    2 palletizing robots (depose stations) with 2 OUT Bases each;
--    10 bays per alley, each with 5 positions (nodes), giving an access to 5 locations on the right and 5 on the left.	
+-    10 bays per alley, each with 5 positions (nodes), giving access to 5 locations on the right and 5 on the left.
 
-The following figure is a schematic representation of the warehouse - View of floor-level components. **to be modified**
+The following figure is a diagram showing the key components of a warehouse.
 ![image](../images/schema_groundfloor_imic.png)
 
-The next figure is a schematic representation of the storage locations in each tube for each alley. **to be modified**
+The next figure is a scheme of the storage locations in each tube for each alley.
 ![image](../images/schema_tubes_imic.png)
 
-# System Constraints
+# System Constraints and Fixed Parameters
 In addition to the structural data provided above, the system imposes the following constraints:
 -   One AGV per elevator at a time;
 -   A package can contain only one SKU, but multiple stock locations may have the same SKU (redundancy);
 -   The order in which packages are sent to the palletizing conveyors (OUT) must be followed;
 <!-- Only one AGV per bay, with a maximum of three AGVs per tube;-->
 <!-- A maximum of one AGV per graph node and a minimum distance of 10 cm between AGVs at all times (applies whether AGVs are following one another or crossing paths on two parallel paths)-->
+
+In addition to the structural data provided above, the system imposes the following parameters:
+-    Inbound and outbound pallets are uniformly sized at 50 packages
+-    The priority order of packages on OUT missions is a parameter called “rank”. The rank takes a value from 0 (bottom) to 49 (top), the rank is reset to 0 for each new pallet.
 
 <!--# Inventory and SKUs
 To model realistic inventory, we consider two pieces of information about SKUs:
@@ -119,13 +122,6 @@ The steps of an OUT mission are as follows:
 -    The package is retrieved by the palletizing robot from the conveyor and placed onto the corresponding pallet;
 -    The OUT mission is then complete. The AGV can immediately receive a new mission (IN or OUT).
 
-## Fixed parameters for the missions under consideration
--    Outbound pallets are uniformly sized at 50 packages
--    Inbound pallets may be partially depalletized
--    The priority order of packages on OUT missions is a parameter called “rank”. The rank takes a value from 0 (bottom) to 49 (top), the rank is reset to 0 for each new pallet.
--    Upon arrival at the picking stations (PS), each package to be stored is assigned to an IN Base and will be available during the IN mission.
--    Upon departure from the depose stations (DS), OUT Bases are not differentiated for package assignment. OUT missions provide the DS information, and the AGVs deposit the packages at the first available OUT Base, following the order determined by the package’s position on the pallet. The OUT palletizing robots are capable of rearranging the order of two consecutive packages (maximum position error of 1).
-
 # Input: Test Scenarios - Inventory and Missions
 In order to test and compare the project’s various algorithms, it is necessary to formalize test datasets in the form of representative scenarios. These scenarios reflect two aspects in particular: the representation of a realistic warehouse inventory and the management of missions to be performed by AGVs in the form of coherent missions. These dataset will be given to the contestants.
 
@@ -133,7 +129,7 @@ The list of IN/OUT missions over a 2-hour period will be given, in JSON format, 
 -    IN missions: SKU, storage location, PS where to pick up the package
 -    OUT missions: SKU, storage locations (all locations where the requested SKU is located), DS where to drop off the package, rank, date by which the pallet must be complete
 
-A FlexSim model of the given structure with a dashboard will allow participants to test their solutions directly in the evaluation tool.
+A FlexSim model of the given structure with a dashboard will allow participants to test their solutions directly in the evaluation tool. This model should be available in November 2026.
 
 # Decision and KPI
 The model developed by the participating teams must make the following decisions:
@@ -142,7 +138,7 @@ The model developed by the participating teams must make the following decisions
 -    Which AGV for which mission?
 -    In what order should the missions be executed?
 
-Specific KPIs will be defined soon. Currently, some relevant KPIs are : delay and computation time.
+KPIs are **makespan/pallet**, **global makespan**, and **computation time**.
 
 # Output
 Develop a management strategy using a combination of algorithms to achieve an optimal solution with the best possible performance metrics.
