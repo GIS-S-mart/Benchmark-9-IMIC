@@ -1,4 +1,4 @@
-The **DYNALOG** project is part of intralogistics and warehouse automation, where mobile robots meet companies’ needs for flexibility and performance. Specifically, the project focuses on evaluating FIVES XCELLA’s solution, in which a fleet of AGVs handles order fulfillment by navigating and accessing warehouse racks via a system of elevators to retrieve or deposit packages. 
+The **DYNALOG** project is part of intralogistics and warehouse automation, where mobile robots meet companies’ needs for flexibility and performance. Specifically, the project focuses on evaluating FIVES XCELLA’s solution, in which a fleet of AGVs handles order fulfillment by navigating and accessing warehouse racks via a system of elevators to retrieve or dropped off packages. 
 A package is a container arising from a homogeneous pallet with one type of items, all the packages of one pallet have the same reference (SKU).
 This solution highlights the importance of inventory management, as well as mission scheduling and the selection of AGV paths.
 
@@ -8,7 +8,7 @@ This solution highlights the importance of inventory management, as well as miss
 The warehouses in the FIVES XCELLA solution organize product inventory into alleys with levels featuring elevators for ascending on one side and descending on the other.
 Each level in an alley, known as ‘tubes’, is divided into bays separated by shelving legs. Each bay contains a set of storage locations on either side of the tube.
 
-In addition to the storage area, there is a floor space dedicated to pick and deposit packages. Depalletizing robots place packages to be stored onto conveyors so that AGVs can retrieve them at collection points (IN Bases). Similarly, palletizing robots retrieve packages to be removed from inventory onto conveyors, which are fed by packages deposited by the AGVs at deposit points (Bases OUT). We assume that the overall inbound and outbound throughput rates are equal, such that the average number of products in inventory remains constant.
+In addition to the storage area, there is a floor space dedicated to pick and deposit packages. Depalletizing robots place packages to be stored onto conveyors so that AGVs can retrieve them at collection points (IN Bases). Similarly, palletizing robots retrieve packages to be removed from inventory onto conveyors, which are fed by packages dropped off by the AGVs at deposit points (Bases OUT). We assume that the overall inbound and outbound throughput rates are equal, such that the average number of products in inventory remains constant.
 
 The AGVs can move through the warehouse by traveling on the floor, using elevators  to access upper levels, and traveling in tubes. All movements permitted by the AGVs are modeled as a directed graph. The nodes of the graph represent points of interest on the floor or within the warehouse.
 
@@ -30,7 +30,7 @@ To ensure clear communication and shared understanding among all stakeholders, t
 |  Upward elevator (IN)            | An elevator at the entrance to the alley that allows AGVs to travel up to the tubes                        |
 |  Downward elevator (OUT)         | An elevator at the end of the alley that allows AGVs to return to ground floor                             |
 |  IN Base                         | Collection point where AGVs pick up packages to be put into stock                                          |
-|  OUT Base                        | Drop-off point where AGVs deposit packages to be removed from inventory                                    |
+|  OUT Base                        | Drop-off point where AGVs dropped off packages to be removed from inventory                                    |
 |  Picking Stations (IN)           | All IN Bases and infeed conveyors associated with a depalletizing robot                                    |
 |  Depose Stations (OUT)          | All OUT Bases and exit conveyors associated with a palletizing robot                                       |
 |  Homogeneous pallet              | Pallet consisting of packages containing same SKU                                                          |
@@ -138,7 +138,11 @@ The model developed by the participating teams must make the following decisions
 -    Which AGV for which mission?
 -    In what order should the missions be executed?
 
-KPIs are **makespan/pallet**, **global makespan**, and **computation time**.
+KPIs are :
+- **global makespan** (1) : from the first mission asked to the last one completed
+- **makespan/pallet IN** (2) : for each homogeneous pallet, from the first package depalletized on the conveyor to the last one leaving the IN Base 
+- **makespan/pallet OUT** (2) : for each mixed pallet, from the arrival of the pallet to the last package dropped off on the OUT Base
+- **computation time** (3)
 
 # Output
 Develop a management strategy using a combination of algorithms to achieve an optimal solution with the best possible performance metrics.
