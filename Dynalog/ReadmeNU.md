@@ -125,9 +125,16 @@ The steps of an OUT mission are as follows:
 # Input: Test Scenarios - Inventory and Missions
 In order to test and compare the project’s various algorithms, it is necessary to formalize test datasets in the form of representative scenarios. These scenarios reflect two aspects in particular: the representation of a realistic warehouse inventory and the management of missions to be performed by AGVs in the form of coherent missions. These dataset will be given to the contestants.
 
-The list of IN/OUT missions over a 2-hour period will be given, in JSON format, including the following information:
--    IN missions: SKU, storage location, PS where to pick up the package
--    OUT missions: SKU, storage locations (all locations where the requested SKU is located), DS where to drop off the package, rank, date by which the pallet must be complete
+The impact of two parameters will be studied :
+- the size of AGV fleet 
+- the SKU popularity
+For each combination of parameters, 5 instances will be generated to ensure the robustness of the algorithms.
+
+For each instance, the list of IN/OUT missions over a 2-hour period will be given, in JSON format, including the following information:
+-    Initial stock: initial SKU and their locations
+-    AGVs: Initial positions
+-    IN missions: SKU, date, IN Base where to pick up the package 
+-    OUT missions: SKU, date by which the pallet must be complete, OUT Base where to drop off the package, rank
 
 A FlexSim model of the given structure with a dashboard will allow participants to test their solutions directly in the evaluation tool. This model should be available in November 2026.
 
@@ -148,7 +155,7 @@ KPIs are :
 Develop a management strategy using a combination of algorithms to achieve an optimal solution with the best possible performance metrics.
 
 Expected deliverables are the following:
--    A list of scheduled missions with their allocations (to be sent to FlexSim)
+-    A list of scheduled missions with their allocations **for each instance** (to be sent to FlexSim)
 -    A report explaining the implemented logic and justifying the choice of algorithms (respecting SOHOMA template)
 <!---    A list of storage locations of SKUs over time-->
 
