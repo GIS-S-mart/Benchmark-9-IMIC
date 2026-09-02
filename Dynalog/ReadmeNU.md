@@ -10,7 +10,7 @@ Each level in an alley, known as ‘tubes’, is divided into bays separated by 
 
 In addition to the storage area, there is a floor space dedicated to pick and deposit packages. Depalletizing robots place packages to be stored onto conveyors so that AGVs can retrieve them at collection points (IN Bases). Similarly, palletizing robots retrieve packages to be removed from inventory onto conveyors, which are fed by packages dropped off by the AGVs at deposit points (Bases OUT). We assume that the overall inbound and outbound throughput rates are equal, such that the average number of products in inventory remains constant.
 
-The AGVs can move through the warehouse by traveling on the floor, using elevators  to access upper levels, and traveling in tubes. All movements permitted by the AGVs are modeled as a directed graph. The nodes of the graph represent points of interest on the floor or within the warehouse.
+The AGVs can move through the warehouse by traveling on the floor, using elevators  to access upper levels, and traveling in tubes. The nodes of the graph represent points of interest on the floor or within the warehouse.
 
 A video is avalaible [here](https://www.youtube.com/watch?v=A7SbZuiYZvM) to show the system.
 
