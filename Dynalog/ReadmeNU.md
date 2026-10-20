@@ -69,7 +69,7 @@ Below, the warehouse layout for IMIC contest:
 **The depalletization process is faster than the palletization process.*
 
 The following figure is a diagram showing the key components of a warehouse.
-![image](../images/schema_groundfloor_imic.png)
+![image](../images/schema_groundfloor_imic.jpg)
 
 The next figure is a scheme of the storage locations in each tube for each alley.
 ![image](../images/schema_tubes_imic.png)
