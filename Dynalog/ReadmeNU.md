@@ -62,9 +62,11 @@ We distinguish between the warehouse ground level and the storage floor levels; 
 
 Below, the warehouse layout for IMIC contest:
 -    10 alleys and 10 levels (10 tubes per alley) beneath the storage area;
--    1 depalletizing robot (picking station) with 4 IN Bases;
--    2 palletizing robots (depose stations) with 2 OUT Bases each;
+-    1 depalletizing robot with 4 IN Bases*;
+-    2 palletizing robots with 2 OUT Bases each*;
 -    10 bays per alley, each with 5 positions (nodes), giving access to 5 locations on the right and 5 on the left.
+
+**The depalletization process is faster than the palletization process.*
 
 The following figure is a diagram showing the key components of a warehouse.
 ![image](../images/schema_groundfloor_imic.png)
@@ -76,27 +78,11 @@ The next figure is a scheme of the storage locations in each tube for each alley
 In addition to the structural data provided above, the system imposes the following constraints:
 -   One AGV per elevator at a time;
 -   A package can contain only one SKU, but multiple stock locations may have the same SKU (redundancy);
--   The order in which packages are sent to the palletizing conveyors (OUT) must be followed;
-<!-- Only one AGV per bay, with a maximum of three AGVs per tube;-->
-<!-- A maximum of one AGV per graph node and a minimum distance of 10 cm between AGVs at all times (applies whether AGVs are following one another or crossing paths on two parallel paths)-->
+-   The order in which packages are sent to the palletizing conveyors (OUT) must be followed.
 
 In addition to the structural data provided above, the system imposes the following parameters:
 -    Inbound and outbound pallets are uniformly sized at 50 packages
 -    The priority order of packages on OUT missions is a parameter called “rank”. The rank takes a value from 0 (bottom) to 49 (top), the rank is reset to 0 for each new pallet.
-
-<!--# Inventory and SKUs
-To model realistic inventory, we consider two pieces of information about SKUs:
-- The presence of an SKU in inventory and in orders follows a “popularity” or skewness pattern. In other words, not every product has the same probability of being ordered; some products are more popular (in demand) and are therefore stocked in greater quantities.
-- Each SKU has weight/volume data that allows them to be sorted into three categories: M1 for the heaviest, M2 for medium, and M3 for the lightest. This category is used to organize outgoing pallets: packages containing SKUs in category M1 are placed first on the pallet, followed by M2, and then M3.
-The popularity distribution of SKUs follows an exponential distribution, as shown in the image below:
-![image](../images/Stock.jpg)
-
-When a test scenario is generated, the number of distinct SKUs is provided, along with the parameter q of an q_exponential distribution, which is used to set the slope of the popularity curve. Each SKU is then assigned a popularity value as shown in the image above.
-We also consider the case where all SKUs have the same popularity—a value of 1, for example—following a uniform distribution.
-Next, each SKU is also assigned a weight/volume class—M1, M2, or M3—with equal probability. Thus, each SKU has popularity and weight information, which are subsequently used to consistently generate the output pallets, followed by the initial inventory and the input pallets.
-
-The initial inventory is represented by a list of SKUs, without specific locations within the inventory. When a scenario is run by the framework, these locations are initialized by calling the “scheduler.” This ensures that the initial inventory layout is consistent with the scheduling algorithm used in the scenario.
-The inventory is therefore represented as a dictionary, associating each SKU with one or more storage locations. A storage location is an object defined.-->
 
 # Mission
 FIVES XCELLA uses input scenarios that model two types of missions:
@@ -131,7 +117,7 @@ The impact of two parameters will be studied :
 For each combination of parameters, 5 instances will be generated to ensure the robustness of the algorithms.
 
 For each instance, the list of IN/OUT missions over a 2-hour period will be given, in JSON format, including the following information:
--    Initial stock: initial SKU and their locations
+-    Initial stock: initial SKU and redundancy
 -    AGVs: Initial positions
 -    IN missions: SKU, date, IN Base where to pick up the package 
 -    OUT missions: SKU, date by which the pallet must be complete, OUT Base where to drop off the package, rank
@@ -157,7 +143,6 @@ Develop a management strategy using a combination of algorithms to achieve an op
 Expected deliverables are the following:
 -    A list of scheduled missions with their allocations **for each instance** (to be sent to FlexSim)
 -    A report explaining the implemented logic and justifying the choice of algorithms (respecting SOHOMA template)
-<!---    A list of storage locations of SKUs over time-->
 
 
 # References
