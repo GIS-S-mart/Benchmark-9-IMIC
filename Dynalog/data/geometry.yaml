@@ -1,0 +1,31 @@
+LayoutDimensions:                         # FIXED based on package/case dimensions    
+  CaseDimensions: [0.650, 0.450, 0.320]   # depth (y) x width (x) x height (z)
+  DistFirstLevel: 0.516                   # distance between ground and first tube (z axis)
+  DistBetweenLevel: 0.482                 # distance between tubes (z axis)
+  CaseSpacingWidth: 0.12                  # distance between 2 packages in bay in tube (x axis)
+  CaseSpacingLength: 0.06                 # distance between 2 packages stocked one in front of the other (depth) in tube (y axis)
+  BayLength: 3.055                        # distance between 2 beginning of bay (x axis)
+  BaySpacing: 0.325                       # distance between 2 bays back to back (x axis)
+  TubeAlleySize: 0.812                    # dimension of a tube alley: distance between L-R front package (y axis depth)
+  AlleyWidth: 3.532                       # distance between back to back alleys on ground (y axis)
+  DistBetweenAlley: 3.918                 # distance between middle of alleys on ground (y axis)
+  AlleySpacing: 0.386                     # distance between back to back alleys on ground (y axis)
+  DistBetweenFirstCaseFirstTrack: 1.65    # distance between ELEVATOR 1st track and 1st case in tube (x axis)
+  DistBetweenTrack: 0.244                 # distance between ELEVATOR tracks (x axis)
+  
+  DistBetweenPsFirstUnderPath: 1.0        # distance between picking station and first path under conveyor on ground (y axis)
+  DistBetweenUnderPath: 1.1               # distance between paths under conveyor on ground (y axis)
+
+CurvedEdge:                               # Turning on ground (not in place rotation)         
+  radius: 0.5                             # radius of curve (clothoid)
+  length: 0.835                           # length of curve
+
+ElevatorDimensions:                       # Rectangular dimensions (shape of ELEVATOR)
+  length_x:
+    oneTrack: 1.8                         # If only one track ELEVATOR is shorter
+    twoTrack: 2.0
+  length_y: 1.0
+
+BasesDimensions:                          # Rectangular dimensions (size of a AGV)
+  length_x: 0.72
+  length_y: 1.228

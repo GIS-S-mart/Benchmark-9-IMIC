@@ -1,0 +1,9 @@
+ScenarioConfig:
+  stockFillingRate: 80    # percentage of occupied slot in stock at init (50,80 or 95)
+  skewness:               # repartition law on references to follow a popularity curve
+    coefficient: 0.8      # float law parameter : 0 uniform or lamda 1/exponential
+    numberSKU: 100        # total number of references (SKU) in stock 
+    maxBatchSizeIN: 50    # number of homogeneous references unloaded by batch for a picking station
+  numberInstances: 5      # number of instances for missions + AGV initial positions (random seed repetition)
+  numberAGV:           # list of number of AGV to create multiple instances with different number of robots (different scenario)                   
+    - 60 

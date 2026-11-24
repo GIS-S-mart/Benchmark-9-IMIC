@@ -1,0 +1,45 @@
+Layout:                    # configuration of the warehouse
+  nbAlley: 10              # number of alley in warehouse
+  pickingStations:         # list of nb of Base IN (picking) per robot de-palletiser
+    - nbBaseIN: 4          # 1 robot with 4 Bases
+  deposeStations:          # list of nb of Base OUT (depose) per robot palletiser
+    - nbBaseOUT: 2         # 2 robots with 2 Bases
+    - nbBaseOUT: 2            
+  nbTube: 10               # number of tube per alley in the warehouse
+  nbBay: 10                # number of bay per tube in each alley in the warehouse
+  nbElevatorTrack: 1       # number of track in the ELEVATOR (possibility to carry multiple AGV at same time)
+
+Elevator:
+  maxLinearSpeed: 3.0          # maximum linear speed (safe) m/s
+  maxLinearAcceleration: 3.0   # maximum linear acceleration/deceleration (safe) m/s²
+  hangTimeFromGround: 2.311    # seconds to hang robot on track from ground
+  hangTimeFromTube: 2.729      # seconds to hang robot on track from tube
+  releaseTimeOnGround: 2.033   # seconds to release robot from track on ground
+  releaseTimeInTube: 2.729     # seconds to hang robot from track from in tube
+
+AGV:
+  width: 0.72                  # width of the robot in m
+  length: 1.228                # length of the robot in m
+  height: 0.338                # height of the robot in m
+  wheelRadius: 0.050           # wheel radius in m
+  wheelsSeparation: 0.678      # distance between wheels (width) in m
+  maxLinearSpeed: 2.7          # maximum linear speed (safe) m/s
+  maxLinearAcceleration: 1.4   # maximum linear acceleration/deceleration (safe) m/s²
+  maxCurvedSpeed: 0.76         # maximum angular speed when turning along a curve rad/s
+  timePick:                    # time in seconds to pick a package either: 
+    stock:                     # from stock, depending on depth location here only one depth
+      firstDepth: 2.781
+      secondDepth: 2.0
+    base: 3.219                # from base IN 
+  timeDepose:                  # time in seconds to depose a package either:
+    stock:                     # in stock, depending on depth location here only one depth
+      firstDepth: 2.605
+      secondDepth: 2.0
+    base: 2.695                # from base OUT
+  lidarSecurityDist: 2.37      # length of rectangle (m) covered by lidar at max speed (2.7 m/s) 
+
+
+Scenario:
+  temporalHorizon: 120       # time horizon in minutes to simulate
+  baseINPeriod: 8.0          # time between packages in seconds for picking stations
+  baseOUTPeriod: 8.0         # time between packages in seconds for deposit stations
